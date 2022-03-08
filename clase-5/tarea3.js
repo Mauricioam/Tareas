@@ -1,50 +1,55 @@
-const $calcular = document.querySelector("#calcular");
-let arrayNumeros = [];
-let $numeros = document.querySelectorAll(".numeros");
-
-for (let i = 0; i < $numeros.length; i++){
-    arrayNumeros.push(`${Number($numeros[i].innerText)}`)
-};
+const $numeros = document.querySelectorAll(".numeros");
 
 
-    
-    
+function obtenerPromedio(){
+let suma = 0;
+for (let i = 0; i < $numeros.length; i++) {
+    suma = suma + Number($numeros[i].innerText)   
+}
+ let promedio = suma / $numeros.length;
+ return promedio;
+} 
 
-
-
-$calcular.onclick = function(){
-    let promedio = 0;
-    let suma = 0;
-    for (let i = 0; i < arrayNumeros.length; i++) {
-        suma = suma + Number(arrayNumeros[i]);
-         
+function numeroMaximo (){
+    let maximo = Number($numeros[0].innerText);
+    for (let i = 0; i < $numeros.length; i++) {
+            if (Number($numeros[i].innerText) > maximo) {
+                maximo = Number($numeros[i].innerText);
+            }    
+          
     }
-    promedio = suma / arrayNumeros.length;
+     return maximo;   
+    }
 
-    const textoPromedio = document.querySelector("#promedio");
+function numeroMinimo (){
+    let minimo = Number($numeros[0].innerText);
+    for (let i = 0; i < $numeros.length; i++) {
+        if (Number($numeros[i].innerText) < minimo){
+            minimo = Number($numeros[i].innerText);
+        }
+      
+        
+    } return minimo;
+}
 
-    textoPromedio.innerText = textoPromedio.innerText + " " + promedio
-    
+function numeroFrecuente (){
 
-// estas funciones las encontre en internet.
-   let NumeroMax = Math.max(...arrayNumeros)
-
-   const textoNumeroMax = document.querySelector("#numero-grande");
-
-    textoNumeroMax.innerText = textoNumeroMax.innerText + " " + NumeroMax;
-
-    let NumeroMin = Math.min(...arrayNumeros);
-
-    const textoNumeroMin = document.querySelector("#numero-pequeno");
-
-    textoNumeroMin.innerText = textoNumeroMin.innerText + " " + NumeroMin;
+}
 
 
 
-  
 
-    
-    
 
- return false    
+const $calcular = document.querySelector("#calcular");
+
+$calcular.onclick = function (){
+const $promedio = document.querySelector("#promedio");
+$promedio.innerText = $promedio.innerText + " " + obtenerPromedio();
+const $maximo = document.querySelector("#numero-maximo");
+$maximo.innerText = $maximo.innerText + " " + numeroMaximo();
+const $minimo = document.querySelector("#numero-minimo");
+$minimo.innerText = $minimo.innerText + " " + numeroMinimo();
+
+
+return false;
 }
