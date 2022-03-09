@@ -31,9 +31,22 @@ function numeroMinimo (){
         
     } return minimo;
 }
-
+// aca intente hacer un contador que me digas las veces q se repite el numero para luego determinar ese numero
+// asociando al contador ,  
 function numeroFrecuente (){
+    let contador = 0;
+    let frecuente =0;
+    for (let i = 0; i < $numeros.length; i++){
+            for (let l = 0; l < $numeros.length; l++) {
+                if (Number($numeros[l].innerText === Number($numeros[i].innerText))) {
+                    contador += 1;
+                
+                }
+                
+            }
+    }
 
+return ;
 }
 
 
@@ -49,6 +62,8 @@ const $maximo = document.querySelector("#numero-maximo");
 $maximo.innerText = $maximo.innerText + " " + numeroMaximo();
 const $minimo = document.querySelector("#numero-minimo");
 $minimo.innerText = $minimo.innerText + " " + numeroMinimo();
+const $numeroFrecuente = document.querySelector("#numero-frecuente");
+$numeroFrecuente.innerText= $numeroFrecuente.innerText + " " + numeroFrecuente();
 
 
 return false;
