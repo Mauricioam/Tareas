@@ -7,7 +7,7 @@ $botonUsuario.onclick = function() {
     const edadUsuario = (document.querySelector("#edad-usuario").value);
     const $titulo = document.querySelector(".titulo");
 
-     $titulo.innerText =`Bienvenido ${primerNombre} ${segundoNombre} ${apellido} de ${edadUsuario} años` 
+     $titulo.textContent =`Bienvenido ${primerNombre} ${segundoNombre} ${apellido} de ${edadUsuario} años` 
      return false
 
         
