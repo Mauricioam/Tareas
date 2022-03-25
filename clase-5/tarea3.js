@@ -57,13 +57,13 @@ const $calcular = document.querySelector("#calcular");
 
 $calcular.onclick = function (){
 const $promedio = document.querySelector("#promedio");
-$promedio.textContent = $promedio.textContent + " " + obtenerPromedio();
+$promedio.innerText = $promedio.innerText + " " + obtenerPromedio();
 const $maximo = document.querySelector("#numero-maximo");
-$maximo.textContent = $maximo.textContent + " " + numeroMaximo();
+$maximo.innerText = $maximo.innerText + " " + numeroMaximo();
 const $minimo = document.querySelector("#numero-minimo");
-$minimo.textContent = $minimo.textContent + " " + numeroMinimo();
+$minimo.innerText = $minimo.innerText + " " + numeroMinimo();
 const $numeroFrecuente = document.querySelector("#numero-frecuente");
-$numeroFrecuente.textContent= $numeroFrecuente.textContent + " " + numeroFrecuente();
+$numeroFrecuente.innerText= $numeroFrecuente.innerText + " " + numeroFrecuente();
 
 
 return false;

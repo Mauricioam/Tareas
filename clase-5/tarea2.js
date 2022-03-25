@@ -28,7 +28,7 @@ $calcular.onclick = function (){
         segundosTotales = division1;
     }
     const $TextoMostrado = document.querySelector("#texto-mostrado");
-    $TextoMostrado.textContent = `El tiempo total es de ${horasTotales} horas , ${minutosTotales} minutos y ${segundosTotales} segundos`;
+    $TextoMostrado.innerText = `El tiempo total es de ${horasTotales} horas , ${minutosTotales} minutos y ${segundosTotales} segundos`;
     return false;
     }
 
