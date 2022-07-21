@@ -46,7 +46,7 @@ function numeroFrecuente (){
             }
     }
 
-return ;
+return frecuente;
 }
 
 
